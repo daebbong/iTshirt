@@ -13,15 +13,16 @@ graph TD
 ## sequence diagram
 ```mermaid
 sequenceDiagram
-    participant A
     participant B
-    A->C: +50
+    participant A
+    participant C
+    A->>C: +50
     loop Healthcheck
-        C->C: 0
+        C->>C: 0
     end
-    bla bla<br/>blabla...
+    Note left of A: bla<br/>blabla...
     C-->A: -50
-    C->B: -20
+    C-->B: -20
     B-->C: +20
 ```
 
